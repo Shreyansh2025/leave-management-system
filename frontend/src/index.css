@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-ink-50: #f1f6f6;
+  --color-ink-100: #dbe8e8;
+  --color-ink-400: #3d6b6f;
+  --color-ink-600: #1f4548;
+  --color-ink-700: #17383a;
+  --color-ink-900: #0d2224;
+
+  --color-marigold-100: #fbeacb;
+  --color-marigold-500: #e0982d;
+  --color-marigold-600: #c17f1c;
+
+  --color-approved-50: #eefaf3;
+  --color-approved-600: #1f8a53;
+  --color-rejected-50: #fdf0ef;
+  --color-rejected-600: #c1442b;
+  --color-cancelled-50: #f3f3f1;
+  --color-cancelled-600: #6b6963;
+
+  --color-paper: #faf9f6;
+
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-paper);
+  color: var(--color-ink-900);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.status-stub {
+  position: relative;
+  border-left: 4px solid transparent;
+}
+.status-stub[data-status="Pending"] { border-left-color: var(--color-marigold-500); }
+.status-stub[data-status="Approved"] { border-left-color: var(--color-approved-600); }
+.status-stub[data-status="Rejected"] { border-left-color: var(--color-rejected-600); }
+.status-stub[data-status="Cancelled"] { border-left-color: var(--color-cancelled-600); }
+
+:focus-visible {
+  outline: 2px solid var(--color-ink-600);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
