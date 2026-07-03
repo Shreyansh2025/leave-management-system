@@ -13,19 +13,19 @@ async function seed() {
   if (!existingManager) {
     const result = run(
       `INSERT INTO employees (name, email, password, department, role) VALUES (?, ?, ?, ?, 'manager')`,
-      ['Priya Sharma', 'manager@company.com', password, 'Engineering']
+      ['Shruti Jat', 'manager@proteccio.com', password, 'Engineering']
     );
     managerId = result.lastInsertRowid;
-    console.log('Created manager: manager@company.com / Password123!');
+    console.log('Created manager: manager@proteccio.com / Password123!');
   } else {
     managerId = existingManager.id;
     console.log('Manager already exists, skipping.');
   }
 
   const employees = [
-    { name: 'Aarav Mehta', email: 'aarav@company.com', dept: 'Engineering' },
-    { name: 'Sana Iqbal', email: 'sana@company.com', dept: 'Design' },
-    { name: 'Rohan Verma', email: 'rohan@company.com', dept: 'Engineering' },
+    { name: 'Ajay Mehta', email: 'ajay@proteccio.com', dept: 'Engineering' },
+    { name: 'Shreyansh Surana', email: 'shreyansh@proteccio.com', dept: 'Design' },
+    { name: 'Priyani Patidar', email: 'priyani@proteccio.com', dept: 'Engineering' },
   ];
 
   const employeeIds = [];
@@ -67,8 +67,8 @@ async function seed() {
   }
 
   console.log('\nSeed complete. Sample logins:');
-  console.log('  Manager  -> manager@company.com / Password123!');
-  console.log('  Employee -> aarav@company.com   / Password123!');
+  console.log('  Manager  -> manager@proteccio.com / Password123!');
+  console.log('  Employee -> ajay@proteccio.com   / Password123!');
   process.exit(0);
 }
 

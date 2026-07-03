@@ -75,8 +75,8 @@ export default function Login() {
 
         <div className="mt-6 text-xs text-ink-400 bg-ink-50 rounded-lg p-3 space-y-1">
           <p className="font-medium text-ink-600">Sample credentials</p>
-          <p>Manager: manager@company.com / Password123!</p>
-          <p>Employee: aarav@company.com / Password123!</p>
+          <p>Manager: manager@proteccio.com / Password123!</p>
+          <p>Employee: ajay@proteccio.com / Password123!</p>
         </div>
       </div>
     </div>
